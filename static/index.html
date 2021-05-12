@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google" content="notranslate" />
+
+    <title>Nest Chat App</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="box">
+            <header>
+                <div class="header">
+                    <div class="header-options">
+                        <label class="me">You</label>
+                    </div>
+                </div>
+            </header>
+            <main class="body">
+                <div class="box-messages">
+                </div>
+            </main>
+            <footer>
+                <div class="footer">
+                    <div class="footer-options">
+                        <input type="text" class="send-message-area" placeholder="Type message..."></input>
+                        <input class="send-button" type="button" value="Send"/>
+                    </div>
+                </div>
+            </footer>
+        </div>  
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

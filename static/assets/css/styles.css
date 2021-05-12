@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+}
+
+#app {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(217deg, rgb(191,0,1), rgb(1,173,170) 100%);
+}
+
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 800px;
+}
+
+.header {
+    width: 100%;
+    opacity: 0.6;
+    background: rgb(0,0,0);
+    border-top-left-radius: 25px;
+}
+
+.header-options {
+    padding: 20px;
+    color: rgb(255,255,255);
+}
+
+.body {
+    flex-grow: 2;
+    opacity: 0.7;
+    background: rgb(0,0,0);
+    overflow: auto;
+    max-height: 80%;
+    height: 80%;
+}
+
+.box-messages {
+    padding: 20px;
+    background: none;
+}
+
+.wrapper-content-box {
+    display: flex;
+    flex-direction: column;
+    line-break: anywhere;
+    max-width: 45%;
+}
+
+.emissary {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: rgb(255,255,255);
+    margin-bottom: 10px;
+}
+
+.emissary 
+.content-box {
+    border: 2.8px solid rgb(1,173,170);
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.emissary
+.wrapper-content-box
+.user_info {
+    text-align: end;
+}
+
+.sender {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: rgb(255,255,255);
+    margin-bottom: 10px;
+}
+
+.sender 
+.content-box {
+    text-align: start;
+    border: 2.8px solid rgb(191,0,1);
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.user_info {
+    font-size: 0.8rem;
+    margin-top: 4px;
+    opacity: 0.6;
+}
+
+.footer {
+    width: 100%;
+    opacity: 0.6;
+    background: rgb(0,0,0);
+    border-bottom-right-radius: 25px;
+}
+
+.footer-options {
+    display: flex;
+}
+
+.send-message-area {
+    width: 100%;
+    border: none;
+    color: rgb(255,255,255);
+    background: none;
+    outline: none;
+    padding: 20px 0 20px 20px;
+}
+
+.send-button {
+    cursor: pointer;
+    background: none;
+    color: rgb(255,255,255);
+    border: none;
+    margin: 0 5px 0 5px;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(1,173,170);
+    border-radius: 25px;
+}
