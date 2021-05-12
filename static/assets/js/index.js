@@ -24,6 +24,7 @@ const headerEl = (() => {
 
 const listMessagesEl = (() => {
     const payloads = JSON.parse(localStorage.getItem('payloads')) || [];
+    const mainWrapperMessages = document.querySelector('.body');
 
     // private build
     function renderPayloads(payload) {
@@ -49,16 +50,33 @@ const listMessagesEl = (() => {
         boxMessagesEl.appendChild(recipientEl);
     }
 
+    // private treat scroll to bottom
+    function scrollToBottom(cb) {
+        const tot_scroll = mainWrapperMessages.scrollHeight;
+        const box_height = mainWrapperMessages.offsetHeight; 
+        const scroll_position = mainWrapperMessages.scrollTop;
+        
+        if (((tot_scroll - box_height) === scroll_position) || scroll_position === 0) {
+            setTimeout(() => mainWrapperMessages.scrollTop = mainWrapperMessages.scrollHeight, 100)
+        }
+        if (cb) {
+            cb();
+        }
+    }
+
     return {
         init: () => {
             if (payloads.length > 0) {
-                payloads.forEach(payload => renderPayloads(payload))
+                for (let i = 0; i < payloads.length; i++) {
+                    renderPayloads(payloads[i]);
+                }
+                scrollToBottom();
             }
         },
         build: payload => {
             payloads.push(payload);
             localStorage.setItem('payloads', JSON.stringify(payloads));
-            renderPayloads(payload);
+            scrollToBottom(() => renderPayloads(payload))
         }
     }
 })();
