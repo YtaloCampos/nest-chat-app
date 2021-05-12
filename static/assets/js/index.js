@@ -5,7 +5,7 @@ const generateUniqueIdentificator = () => {
 const socketInstance = (() => {
     let socket = null;
     return {
-        init: () => socket = io('http://localhost:3000/chat'),
+        init: () => socket = io('https://nestjs-chat-app.herokuapp.com/chat'), // todo temp, use enviroments
         runEvent: (path, payload, cb) => {
             socket.emit(path, payload);
             cb();
