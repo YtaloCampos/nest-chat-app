@@ -19,7 +19,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 80%;
     width: 800px;
 }
 
@@ -27,7 +26,6 @@ body {
     width: 100%;
     opacity: 0.6;
     background: rgb(0,0,0);
-    border-top-left-radius: 25px;
 }
 
 .header-options {
@@ -40,8 +38,6 @@ body {
     opacity: 0.7;
     background: rgb(0,0,0);
     overflow: auto;
-    max-height: 80%;
-    height: 80%;
 }
 
 .box-messages {
@@ -103,7 +99,6 @@ body {
     width: 100%;
     opacity: 0.6;
     background: rgb(0,0,0);
-    border-bottom-right-radius: 25px;
 }
 
 .footer-options {
@@ -135,4 +130,26 @@ body {
 ::-webkit-scrollbar-thumb {
     background: rgb(1,173,170);
     border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+    .box {
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .box {
+        height: 80%;
+    }
+    .header {
+        border-top-left-radius: 25px;
+    }
+    .body {
+        max-height: 80%;
+        height: 80%;
+    }
+    .footer {
+        border-bottom-right-radius: 25px;
+    }
 }
